@@ -103,6 +103,50 @@ const ProfileComponent = () => {
 
           </div>
         </div>
+
+          <div className="row">
+            <div className="col-md-12 col-xl-12">
+              <Card className='vil-card-pd'>
+                <div className='vil-card-block'>
+                  <div className="row">
+                    <div className="col-md-4 col-xl-4 vil-card-text" onClick={() => goToPage('reporting/tenders', 'tenders', 'Tenders', 'Reporting', '/tenders/', 'Yes')}>
+                      <a href="#" target="_blank"><i className="fa fa-gavel fa-size" aria-hidden="true"></i></a>
+                      <h1>0 </h1>
+                      <p>Tenders floated</p>
+                    </div>
+                    <div className="col-md-4 col-xl-4 vil-card-text">
+                      <a href="#" target="_blank"><i className="fa fa-camera fa-size" aria-hidden="true"></i></a>
+                      <h1>0 </h1>
+                      <p>Events planned</p>
+                    </div>
+                    <div className="col-md-4 col-xl-4 vil-card-text">
+                      <a href="#" target="_blank"><i className="fa fa-pie-chart fa-size" aria-hidden="true"></i></a>
+                      <h1>0 </h1>
+                      <p>RTI received</p>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col-md-4 col-xl-4 vil-card-text" onClick={() => goToPage('reporting/grants-received', 'grants-received', 'Grants Received', 'Reporting', '/grants-received/', 'Yes')}>
+                      <a href="#" target="_blank"><i className="fa fa-thumbs-up fa-size" aria-hidden="true"></i></a>
+                      <h1>0 </h1>
+                      <p>Grants received</p>
+                    </div>
+                    <div className="col-md-4 col-xl-4 vil-card-text" onClick={() => goToPage('about-us/projects', 'projects', 'Projects Members', 'About Us', '/projects/', 'Yes')}>
+                      <a href="#" target="_blank"><i className="fa fa-tasks fa-size" aria-hidden="true"></i></a>
+                      <h1>0 </h1>
+                      <p>Projects</p>
+                    </div>
+                    <div className="col-md-4 col-xl-4 vil-card-text">
+                      <a href="#" target="_blank"><i className="fa fa-money fa-size" aria-hidden="true"></i></a>
+                      <h1>0 </h1>
+                      <p>Fee and Taxes</p>
+                    </div>
+                  </div>
+
+                </div>
+              </Card>
+            </div>
+          </div>
         
       </div>
       

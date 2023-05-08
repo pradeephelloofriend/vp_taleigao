@@ -45,16 +45,16 @@ const NewsSectionComponent = ({setTabKey,devData}) => {
           isApiSubscribed = false;
         };
   },[])
-  //console.log('newsData',newsData)
+  console.log('newsData',newsData)
   return (
       <>
           <section className="wrapper bg-light-orange">
               <div className="container py-10 py-md-10 pb-md-10">
                   <div className="row">
-                      <div className="col-md-6 col-xl-5">
+                      <div className="col-md-6 col-xl-6">
                           <div className='vil-info'>
 
-                          <Card className='abt-card mb-5' title={<span className='latest-title-box'><Image src={'https://res.cloudinary.com/depg2aab2/image/upload/v1665070375/vp/nagoa/news_chxnrr.png'} alt='' height={35} width={35} /><span className='abt-card-head-title'> Latest News</span></span>}>
+                          {/* <Card className='abt-card mb-5' title={<span className='latest-title-box'><Image src={'https://res.cloudinary.com/depg2aab2/image/upload/v1665070375/vp/nagoa/news_chxnrr.png'} alt='' height={35} width={35} /><span className='abt-card-head-title'> Latest News</span></span>}> */}
                             <div className='news-sidebar m-t20'>
                               {newsData!==null?newsData.map((n,idx)=>{
                                 //console.log('date',)
@@ -65,19 +65,34 @@ const NewsSectionComponent = ({setTabKey,devData}) => {
                                 //console.log('date-nes',tempDate)
 
                                 return(
-                                <div key={idx} className="news-block">
-                                    <a href="" title="">
-                                      <h4></h4>
-                                        <div className="news-date">{tempDate[0]}<span>{tempDate[1]}</span></div>
-                                        <div className='news-content'>
-                                          <h4>{n.newsLetter.title}</h4>
-                                          <p>{n.newsLetter.desc}</p>
-                                        </div>
-                                        <div className='f-right news-status'>
-                                          <span className="badge bg-c-red rounded-pill blink">New</span>
-                                        </div>
-                                    </a>
-                                </div>
+                                  <Card className='abt-card mb-5' title={<span className='latest-title-box'><Image src={'https://res.cloudinary.com/depg2aab2/image/upload/v1665070375/vp/nagoa/news_chxnrr.png'} alt='' height={35} width={35} /><span className='abt-card-head-title'> Latest News</span></span>}>
+                                    <div className='news-sidebar m-t20'>
+                                      <div key={idx} className="news-block">
+                                        <a href="" title="">
+                                          <h4></h4>
+                                          <div className="news-date">{tempDate[0]}<span>{tempDate[1]}</span></div>
+                                          <div className='news-content'>
+                                            <h4>{n.newsLetter.title}</h4>
+                                            <p>{n.newsLetter.desc}</p>
+
+                                            {n.newsLetter.images !== null ? n.newsLetter.images.map((j, jx) =>
+                                              <Image alt="s1" src={j.sourceUrl} height={200} width={200} />
+                                            ) : <></>}
+
+                                          </div>
+                                          <div className='f-right news-status'>
+                                            <span className="badge bg-c-red rounded-pill blink">New</span>
+                                          </div>
+                                        </a>
+                                      </div>
+
+                                    </div>
+
+                                    <a
+                                      onClick={() => goToPage('media/news-letters', 'news-letters', 'News Letters', 'Media Links', '/news-letters/', 'Yes')}
+                                      href="#"
+                                      className="more hover link-disp-dgreen mt-3 f-right">View More</a>
+                                  </Card>
                                 )
                               }
                                 
@@ -86,17 +101,17 @@ const NewsSectionComponent = ({setTabKey,devData}) => {
                                 
                             </div>
 
-                            <a 
+                            {/* <a 
                             onClick={() =>goToPage('media/news-letters','news-letters','News Letters','Media Links','/news-letters/','Yes')}
                             href="#" 
-                            className="more hover link-disp-blue mt-3 f-right">View More</a>
-                            </Card>
+                            className="more hover link-disp-dgreen mt-3 f-right">View More</a> */}
+                            {/* </Card> */}
                             
                           </div>
                       </div>
 
 
-                      <div className="col-md-6 col-xl-7">
+                      <div className="col-md-6 col-xl-6">
                         <div className='dev-card'>
                           <Card className='abt-card dev0-card bg-c-blue' 
                           title={
@@ -108,51 +123,6 @@ const NewsSectionComponent = ({setTabKey,devData}) => {
                               <RecentDevelopmentComponent/>
                             </Card>
                           </div>
-                      </div>
-                  </div>
-
-                  
-                  <div className="row">
-                      <div className="col-md-12 col-xl-12">
-                      <Card className='vil-card-pd'>
-                                <div className='vil-card-block'>
-                                  <div className="row">
-                                    <div className="col-md-4 col-xl-4 vil-card-text" onClick={() =>goToPage('reporting/tenders','tenders','Tenders','Reporting','/tenders/','Yes')}>
-                                        <a href="#" target="_blank"><i className="fa fa-gavel fa-size" aria-hidden="true"></i></a>
-                                        <h1>0 </h1>
-                                        <p>Tenders floated</p>
-                                    </div>
-                                    <div className="col-md-4 col-xl-4 vil-card-text">
-                                        <a href="#" target="_blank"><i className="fa fa-camera fa-size" aria-hidden="true"></i></a>
-                                        <h1>0 </h1>
-                                        <p>Events planned</p>
-                                    </div>
-                                    <div className="col-md-4 col-xl-4 vil-card-text">
-                                      <a href="#" target="_blank"><i className="fa fa-pie-chart fa-size" aria-hidden="true"></i></a>
-                                        <h1>0 </h1>
-                                        <p>RTI received</p>
-                                    </div>
-                                  </div>
-                                  <div className="row">
-                                    <div className="col-md-4 col-xl-4 vil-card-text" onClick={() =>goToPage('reporting/grants-received','grants-received','Grants Received','Reporting','/grants-received/','Yes')}>
-                                      <a href="#" target="_blank"><i className="fa fa-thumbs-up fa-size" aria-hidden="true"></i></a>
-                                        <h1>0 </h1>
-                                        <p>Grants received</p>
-                                    </div>
-                                    <div className="col-md-4 col-xl-4 vil-card-text" onClick={() =>goToPage('about-us/projects','projects','Projects Members','About Us','/projects/','Yes')}>
-                                      <a href="#" target="_blank"><i className="fa fa-tasks fa-size" aria-hidden="true"></i></a>
-                                        <h1>0 </h1>
-                                        <p>Projects</p>
-                                    </div>
-                                    <div className="col-md-4 col-xl-4 vil-card-text">
-                                        <a href="#" target="_blank"><i className="fa fa-money fa-size" aria-hidden="true"></i></a>
-                                        <h1>0 </h1>
-                                        <p>Fee and Taxes</p>
-                                    </div>
-                                  </div>
-                                  
-                                </div>
-                              </Card>
                       </div>
                   </div>
 

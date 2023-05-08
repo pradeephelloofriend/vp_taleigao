@@ -98,7 +98,7 @@ const DetailComponent = ({regCertData,cDetailData}) =>{
                                     <p className='mb-0'>{m.menuDesc}</p>
                                     <div className='btn-block mt-3 f-right'>
                                         {m.menuButton.map((b,bix)=>
-                                            <a key={bix} href={`${b.btnLink}`}> <Button className='view-btn mr-5'>{b.btnName}</Button></a>
+                                            <a key={bix} href={`${b.btnLink}`} target="_blank"> <Button className='view-btn mr-5'>{b.btnName}</Button></a>
                                             
                                         )}
                                     {mix==0?

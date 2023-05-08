@@ -13,6 +13,7 @@ import i2 from '../../public/img/istockphoto-1201112520-612x612.jpg'
 import { getAllSchemeDataHome } from '../../lib/api';
 import { connect } from 'react-redux';
 import { setIsloading } from '../../redux/menu/menuAction';
+import load from '../../public/img/loading.png'
 
 const Schemes=({setIsloading})=> {
   const router =useRouter()
@@ -93,8 +94,8 @@ const Schemes=({setIsloading})=> {
               <div className="col-md-12 col-lg-12 ">
                     <div className="scheme-content">
                       <div className="scheme-header mb-5 ">
-                        <h4 className="display-6 mb-0 link-disp-blue">Schemes</h4>
-                        <p className="lead mb-5">We strive to provide the best facilities for our village members. Some of these are listed below.</p>
+                        <h4 className="display-6 mb-0 link-c-white">Schemes</h4>
+                        <p className="lead mb-5 link-disp-peach">We strive to provide the best facilities for our village members. Some of these are listed below.</p>
                       </div>
                       <div className="btn-arrow offset-md-1 offset-lg-3">
                         <Button type="text" className="btn-prev " onClick={previous} ><LeftOutlined /></Button>
@@ -114,7 +115,7 @@ const Schemes=({setIsloading})=> {
                       })} href='#'>
                         <Image
                           height={337}
-                          
+                          placeholder="blur" blurDataURL={load} priority={true}
                           width={500}
                           alt="171x180"
                           src={d.schemes.image.sourceUrl}
@@ -122,7 +123,7 @@ const Schemes=({setIsloading})=> {
                         </a>
                         
                         <div className='dev-slider-box'>
-                          <span className="badge bg-white link-disp-blue rounded-pill">{d.schemes.title}</span>
+                          <span className="badge bg-white link-disp-dgreen rounded-pill">{d.schemes.title}</span>
                         </div>
                       </Figure>
                     </div>

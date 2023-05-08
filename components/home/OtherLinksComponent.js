@@ -3,7 +3,9 @@ import {Card} from 'antd'
 const OtherLinksComponent = () => {
   return (
     <section className="wrapper ol-section " >
+        
         <div className="container py-10 py-md-10 pb-md-10">
+
             <div className='row'>
                 <div className='col-3'>
                     <Card className='ol-card ol-hos'

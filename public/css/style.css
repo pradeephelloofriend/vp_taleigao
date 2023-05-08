@@ -4634,7 +4634,7 @@ textarea.form-control.is-invalid {
     color: #ffff;
     text-align: left;
     list-style: none;
-    background-color: #28375f !important;
+    background-color: #2D334A !important;
     background-clip: none !important;
     border: 0 !important;
     box-shadow: none !important;
@@ -31818,7 +31818,7 @@ fieldset:disabled .btn.btn-circle {
     outline: 0;
     /* color: #c6fbc2; */
     color: #E6E2C3;
-    background: #1fc3e9a3;
+    background: #0C9463;
 }
 
 .dropdown-header {

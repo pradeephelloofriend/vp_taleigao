@@ -29,9 +29,9 @@ const index = ({isLoading}) => {
             <Spin spinning={isLoading}>
             <Sliderbanner/>
             <OtherLinks />
+            <NewsSectionComponent />
             <Banner />
             <ProfileComponent/>
-            <NewsSectionComponent />
             <OtherLinksComponent/> 
             <PopulationSectionComponent/>
             <FacilitesComponent/>

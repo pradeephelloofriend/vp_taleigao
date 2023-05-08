@@ -27,7 +27,7 @@ const PanchayatMemberComponent = () => {
             isApiSubscribed = false;
           };
       },[])
-      //console.log('pmData Panch Members',pmData)
+      console.log('pmData Panch Members',pmData)
   return (
       <>
           <div className='pm-block h-scroll'>

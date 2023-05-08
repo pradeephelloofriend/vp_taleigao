@@ -109,9 +109,6 @@ text-align: center;
   background-color: #d8250a;
 }
 
-.allheadcolor{
-  color: #7f7544;
-}
 
 .newsviewmorebtn2{
   background-color: #7f7544;
@@ -502,7 +499,7 @@ float: right;
   margin-bottom: 24px !important;
 }
 .pf-content-block .display-c1{
-  background-color: #27E1C1 !important;
+  background-color: #4fc3ff  !important;
   margin-bottom: 15px;
 }
 .address-font-15{
@@ -1074,7 +1071,7 @@ padding-left: 0rem;
     color: white ;
 }
 .bg-c-blue{
-    background-color:#28375f;
+    background-color:#2D334A;
     padding: 14px !important;
 }
 .link-c-blue{
@@ -1088,6 +1085,12 @@ padding-left: 0rem;
 }
 .link-disp-black p{
   color: #000000;
+}
+.link-disp-dgreen {
+  color: #2D334A;
+}
+.link-disp-peach {
+  color: #FBE3B9;
 }
 .link-c-white{
   color: #ffffff;
@@ -1568,7 +1571,7 @@ padding-left: 0rem;
 /* SCheme Area*/
 .scheme-area {
   /*background-color: #efefef;*/
-  background-color: #BAD7E9 !important;
+  background-color: #0C9463 !important;
   position: relative;
 }
 .scheme-area .scheme-content{
@@ -1625,7 +1628,7 @@ padding-left: 0rem;
 }
 .image-wrapper.bg-overlay:before{
   /* background: #413a18d1; */
-  background: #bad7e9d9;
+  background: #2d334ac9;
 }
 .pf-img-block{
   text-align: center;
@@ -1674,16 +1677,16 @@ padding-left: 0rem;
   border-top: 1px solid #c4c4c470;
 }
 .pf-bg-orange{
-  background-color: #ba7d00;
+  background-color: #00ff11;
 }
 .pf-bg-blue{
-  background-color: #00b3ba;;
+  background-color: #b25f5f;;
 }
 .pf-bg-merun{
   background-color: #ad008f;;
 }
 .pf-bg-skyb{
-  background-color: #20a0d5;;
+  background-color: #3d00f8;;
 }
 .r-nav-item .nav-btn{
   /*background-color: #0063ff;
@@ -1742,7 +1745,7 @@ padding-left: 0rem;
 }
 .top-header-area{
   line-height: 1.8;
-  background-color: #BAD7E9;
+  background-color: #0C9463;
 }
 .header-content-right a,
 .header-content-left a{
@@ -5182,7 +5185,7 @@ padding-left: 0rem;
   cursor: pointer;
 }
 .bg-light-orange{
-  background-color: #E6E2C3;
+  background-color: #FAB696;
 }
 .slider-bottom-bar .kam-topbar-left .sm-btm-right>li .anticon {
   font-size: 30px;
@@ -5232,14 +5235,14 @@ padding-left: 0rem;
 }
 .abt-card{
   /* border: 1px solid #7f7544 !important; */
-  border: 2px solid #28375f !important;
+  border: 2px solid #2D334A !important;
   border-radius: 0px;
   border-top-left-radius: 0px !important ;
   border-top-right-radius: 0px !important ;
 }
 .abt-card .ant-card-head{
   min-height: 0;
-  background: #28375f;
+  background: #2D334A;
   padding: 0;
   border-bottom: 0px solid #f0f0f0;
     border-radius: 0px 0px 0 0;
@@ -5400,7 +5403,7 @@ border-top: 0px solid #f0f0f0;
     display: block;
     border-radius: 0px 0px 0px 3px;
     /* background-color: #7f7544; */
-    background-color: #28375f ;
+    background-color: #2D334A ;
     position: absolute;
     color: #fff;
     left: -1px;
@@ -5486,18 +5489,18 @@ margin-top: 24px;
 }
   .facility-tab .ant-tabs-tab{
     color: white;
-  background: #28375f;
+  background: #2D334A;
 }
 .facility-tab .ant-tabs-left > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab{
   margin: 4px 0 0 0;
 }
 .facility-tab .ant-tabs-tab.ant-tabs-tab-active {
-  color: #fff;
-  background-color: #BAD7E9;
+  color: #ffffff;
+  background-color: #0C9463;
   
 }
 .facility-tab .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn{
-  color: #28375f;
+  color: #2D334A;
 }
 .facility-tab .ant-tabs-tab-btn{
   color: #ffffff;
@@ -5529,7 +5532,7 @@ padding-bottom: 24px;
 }
 .faci-card:hover{
   border-radius: 10px !important;
-  box-shadow: 0 0px 6px 0 #009FBD, 0 0px 0px 0 #009FBD;
+  box-shadow: 0 0px 6px 0 #0C9463, 0 0px 0px 0 #0C9463;
   margin-top: 10px;
   margin-bottom: 10px;
   -ms-transform: scale(0.1); /* IE 9 */
@@ -5555,7 +5558,7 @@ padding-bottom: 24px;
   /* background-color: #747161; */
   /* background-color: #28375f; */
   /*background-image: url('../img/page-bg.gif');*/
-  background-color: #28375f;
+  background-color: #2D334A;
   padding: 59px 0 10px;
 }
 .c-footer hr{
@@ -5621,7 +5624,7 @@ button.close {
 
 /*about-us-tab*/
 .about-us-tab .ant-tabs-tab{
-  background: #28375f;
+  background: #2D334A;
   padding: 8px 70px 8px 9px ;
 }
 .about-us-tab .ant-tabs > .ant-tabs-nav, .ant-tabs > div > .ant-tabs-nav {
@@ -5635,10 +5638,10 @@ button.close {
 .about-us-tab .ant-tabs-tab.ant-tabs-tab-active {
   color: #fff;
   /* background-color: #7f7544; */
-  background-color: #BAD7E9;
+  background-color: #0C9463;
 }
 .about-us-tab .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn{
-  color: #28375f;
+  color: #2D334A;
 }
 .about-us-tab .ant-tabs-tab-btn{
   color: #ffffff;
@@ -5666,7 +5669,7 @@ padding-bottom: 24px;
   display: block;
   width: 5px;
   height: 35px;
-  background-color: #7f7544;
+  background-color: #0C9463;
   position: absolute;
   top: 0;
   left: 0;
@@ -5780,13 +5783,18 @@ margin-bottom: 18px;
 
 .scheme-block .ant-table-thead > tr > th{
   /* background: #7f7544; */
-  background: #28375f;
+  background: #0C9463;
+  border: 2px solid #2D334A;
+  border-right: 0px solid #2D334A !important;
   padding: 7px 12px;
   font-weight: 600;
   color: #fff;
 }
 .scheme-block .ant-table-tbody > tr > td{
   padding: 7px 12px;
+}
+.ant-table.ant-table-bordered > .ant-table-container > .ant-table-content > table > tbody > tr > td {
+  border-right: 1px solid #2D334A !important;
 }
 .scheme-block .ant-pagination-item-active {
   
@@ -6024,7 +6032,7 @@ border: 0px;
 }
 
 .text-dblue {
-  color: #28375f;
+  color: #ffffff;
 }
 
 .slider-bottom-bar .kam-topbar-left .sm-btm-right{
@@ -6035,7 +6043,7 @@ border: 0px;
 }
 
 .allheadcolor {
-  color: #28375f;
+  color: #2D334A;
   font-size: 110%;
 }
 
@@ -6107,13 +6115,15 @@ border: 0px;
 /*logo navbar end*/
 
 .vil-card-pd {
+  background-color: #0C9463;
+  color: white;
   margin: 50px 1px 30px 0px;
 }
 
 .news-links {
-  background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  background-image: linear-gradient(to right, #0C9463, #2D334A, #2D334A);
   color: white;
-  border: 2px solid #28375f;
+  border: 2px solid #2D334A;
   margin: 15px 0px 15px 0px;
   /* padding: 10px; */
   border-radius: 50px 20px;
@@ -6126,6 +6136,7 @@ border: 0px;
 }
 
 .fa-size {
+  color: antiquewhite;
   font-size: 50px !important;
 }
 
@@ -6138,8 +6149,8 @@ border: 0px;
 }
 
 .fs-clr {
-  background-color: #27E1C1;
-  border: 1px solid #28375f;
+  background-color: #0C9463;
+  border: 1px solid #2D334A;
 }
 
 table {
@@ -6151,5 +6162,6 @@ td {
 }
 tr td {
   padding: 10px 0px 10px 0px;
-  border: 1px solid #28375f;
+  border: 1px solid #2D334A;
+  border-bottom: 1px solid #2D334A !important;
 }

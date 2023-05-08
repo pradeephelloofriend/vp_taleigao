@@ -21,7 +21,7 @@ const TopHeaderAreaComponent = ({setRegStatus,cUser}) => {
                     <div className="row align-items-center">
                         <div className="col-lg-4">
                             <div className="header-content-left">
-                                {/*<a>Welcome To Dongruli Panchayat!</a>*/}
+                                {/*<a>Welcome To Taleigao Panchayat!</a>*/}
                             </div>
                         </div>
                         <div className="col-lg-8">
@@ -29,19 +29,19 @@ const TopHeaderAreaComponent = ({setRegStatus,cUser}) => {
                                 
                                     <a href="tel:+822456974" className="me-xl-8 text-dblue">
                                     <i className="fa fa-mobile me-xl-1"></i>
-                                        Call Us For Inquiry: 0832-2540226
+                                        Call Us For Inquiry: 0832-2453608
                                     </a>
                                     <a href="mailto:hello@surety.com" className="me-xl-8 text-dblue">
                                     <i className="fa fa-envelope-o me-xl-1"></i>
-                                        Email: vpchicalim@gmail.com
+                                        Email: sec.taleigao@gmail.com
                                     </a>
                                     {cUser!==null?
-                                    <a href="#" onClick={()=>handleShow()} className="text-red">
+                                    <a href="#" onClick={()=>handleShow()} className="text-dblue">
                                     <i className="fa fa-sign-out me-xl-1"></i>
                                         Log Out
                                     </a>
                                     :
-                                    <a href="#" onClick={()=> window.open("https://chicalim-user.netlify.app/","_blank")} className="text-white">
+                                    <a href="#" onClick={()=> window.open("https://chicalim-user.netlify.app/","_blank")} className="text-dblue">
                                     <i className="fa fa-user-o me-xl-1"></i>
                                         Login/Register
                                     </a>

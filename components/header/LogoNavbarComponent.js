@@ -15,7 +15,7 @@ const LogoNavbarComponent = () => {
             <Image src={'https://res.cloudinary.com/depg2aab2/image/upload/v1665069084/vp/nagoa/logo_kb3vep.png'} height={100} width={69} alt="Village Panchayats"/>
             <a href="/" title="Village Panchayats">
 
-                     <span>Village Panchayat Chicalim </span>
+                     <span>Village Panchayat Taleigao </span>
                     <span>Government of Goa</span>
                 </a>
             </Space>
