@@ -16,7 +16,7 @@ const { Panel } = Collapse;
 const { TabPane } = Tabs;
 
 const CommitteeDetail = ({regCertData,cDetailData}) =>{
-  console.log('cDetailData answer',cDetailData)
+  // console.log('cDetailData answer',cDetailData)
     const{members}=cDetailData
     const [show,setShow]=React.useState(false)
     const[regData,setRegData]=React.useState(null)
@@ -73,7 +73,7 @@ const CommitteeDetail = ({regCertData,cDetailData}) =>{
       setShow(false)
       //setRegStatus(false)
     };   
-  console.log('cDetailData',cDetailData)
+  // console.log('cDetailData',cDetailData)
     // console.log('applicationTab.members',applicationTab.members)
 
 
@@ -97,6 +97,7 @@ const CommitteeDetail = ({regCertData,cDetailData}) =>{
                             <td className='text-center fw-bolder fs-20 fs-clr' style={{textAlign:'center'}}>Designation</td>
                             <td className='text-center fw-bolder fs-20 fs-clr' style={{textAlign:'center'}}>Contact No.</td>
                             <td className='text-center fw-bolder fs-20 fs-clr' style={{textAlign:'center'}}>Email ID</td>
+                            <td className='text-center fw-bolder fs-20 fs-clr' style={{textAlign:'center'}}>Address</td>
                           </tr>
 
                         </thead>
@@ -108,19 +109,14 @@ const CommitteeDetail = ({regCertData,cDetailData}) =>{
                                 <td className='px-10 fs-15' style={{textAlign:'center'}}>{m.designation}</td>
                                 <td className='text-centre fs-15' style={{textAlign:'center'}}>{m.contactNo}</td>
                                 <td className='text-centre fs-15' style={{textAlign:'center'}}>{m.emailId}</td>
+                                <td className='text-centre fs-15' style={{textAlign:'center'}}>{m.address}</td>
                               </tr>
                             </tbody>
                          
                         ):<></>}
                          </table>
                 
-                        
                       </div>
-
-
-
-                  
-                  
 
           <UploadUserNewModalComponent
               show={show}

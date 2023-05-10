@@ -17,6 +17,7 @@ const  Committee = ({tabKey,routeTitle,menuData,cDetailData,routeUri,setTabKey})
     const [crData,setCrData]=React.useState(null)
     const router = useRouter();
     const[tabLayout,setTablLayout]=React.useState('left')
+    // console.log('mData committee tab',cDetailData)
     React.useEffect(()=>{
         //console.log('tabKey',tabKey)
         let isApiSubscribed = true;
@@ -36,6 +37,8 @@ const  Committee = ({tabKey,routeTitle,menuData,cDetailData,routeUri,setTabKey})
             }
           }
           fetchData()
+
+          
          
             
         }
@@ -88,6 +91,7 @@ const  Committee = ({tabKey,routeTitle,menuData,cDetailData,routeUri,setTabKey})
     //const values=key.split(',')
    
    }
+  //  console.log('mData committee tab',mData)
   return (
     <>
           <section className="wrapper bg-gray">

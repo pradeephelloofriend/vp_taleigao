@@ -5,7 +5,7 @@ import {selectMenuData,selectTabKey} from '../../redux/menu/menuSelector'
 import {setTabKey} from '../../redux/menu/menuAction'
 import {Tabs,Card } from 'antd';
 import { useRouter } from 'next/router'
-import {getCertificateData} from '../../lib/api'
+import {getCertificateData, getProceedData} from '../../lib/api'
 
 import Axios from 'axios';
 import DetailComponent from '../detail/DetailComponent';
@@ -31,8 +31,8 @@ const FormComponent = ({tabKey,routeTitle,menuData,cDetailData,routeUri,setTabKe
         if(tabKey!==null){
             //console.log('tabKey',tabKey)
             async function fetchData() {
-              const cData = await getCertificateData(tabKey) //applo client 
-        
+              // const cData = await getCertificateData(tabKey) //applo client 
+              const cData = await getProceedData()
               // 👇️ only update state if component is mounted
               if (isApiSubscribed) {
                 setCrData(cData)
@@ -85,6 +85,8 @@ const FormComponent = ({tabKey,routeTitle,menuData,cDetailData,routeUri,setTabKe
     
    const {title,desc,iscomplete}= router.query
    //console.log('crData',crData)
+   console.log('mData',mData)
+   console.log('crData title ',crData)
   return (
     <>
           <section className="wrapper bg-gray">
@@ -99,11 +101,11 @@ const FormComponent = ({tabKey,routeTitle,menuData,cDetailData,routeUri,setTabKe
                                             <div className="caption1">
                                                 <h1>{t.node.label}</h1>
                                             </div>
-                                            {crData!==null?iscomplete=='Yes'?
+                                            {title == 'Forms/Downloads' && crData!==null?
                                            
                                             <FormTabDetailComponent  cDetailData={crData}/>
                                             
-                                            : <TabDetailsComponent/> :<SpinningComponent/>  }
+                                            :<SpinningComponent/>  }
                                         </div>
                                         
                                  </TabPane>

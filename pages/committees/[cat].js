@@ -6,7 +6,7 @@ import Committee from '../../components/committees/CommitteeComponent';
 import TabDetailsComponent from '../../components/about-us/TabDetailsComponent';
 export async function getServerSideProps(context) {
   // console.log('context',context);
-  const cDataQuery = await fetch(`${process.env.WP_API_PATH}committee?slug=${context.query.uri}`,{
+  const cDataQuery = await fetch(`${process.env.WP_API_PATH}committee?slug=${context.query}`,{
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',

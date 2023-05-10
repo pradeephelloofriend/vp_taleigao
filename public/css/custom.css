@@ -5855,7 +5855,8 @@ background-size:cover;
   font-weight: 500;
 }
 .profile-section{
-  background-image: url('https://res.cloudinary.com/depg2aab2/image/upload/v1670341242/vp/dongrim/dongruli-pic1-min_ehhjkz.jpg');
+  /* background-image: url('https://res.cloudinary.com/depg2aab2/image/upload/v1670341242/vp/dongrim/dongruli-pic1-min_ehhjkz.jpg'); */
+  background-image: url('https://res.cloudinary.com/depg2aab2/image/upload/v1683607897/vp/taleigao/beach_goa_l1sn4g.jpg');
 }
 .vil-card-block{
   font-size: 18px;
