@@ -28,7 +28,7 @@ const MessageComponent = () => {
         
         <div>
         <h2 className="text-tranfor " >{crData.fees.fieldGroupName}</h2>
-        <table>
+        <table className='cust_tbl'>
             <thead>
                 <tr>
                     <td className='text-center fw-bolder fs-20 fs-clr'>Sr. No</td>
@@ -53,7 +53,7 @@ const MessageComponent = () => {
 
         <div className="pt-10">
         <h2 className="text-tranfor">{crData.taxes.fieldGroupName}</h2>
-        <table>
+        <table className='cust_tbl'>
             <thead>
                 <tr>
                     <td className='text-center fw-bolder fs-20 fs-clr'>Sr. No</td>

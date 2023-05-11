@@ -17,6 +17,7 @@ const { TabPane } = Tabs;
 const FormComponent = ({tabKey,routeTitle,menuData,cDetailData,routeUri,setTabKey}) => {
     const [mData,setMdata]=React.useState(null);
     //const [tabKey,setTabKey]=React.useState(routeUri)
+    const[pData,setPdata]=React.useState(null)
     const [crData,setCrData]=React.useState(null)
     const router = useRouter();
     const[tabLayout,setTablLayout]=React.useState('left')
@@ -35,6 +36,17 @@ const FormComponent = ({tabKey,routeTitle,menuData,cDetailData,routeUri,setTabKe
               const cData = await getProceedData()
               // 👇️ only update state if component is mounted
               if (isApiSubscribed) {
+                let arr=[]
+                cData.forEach(ele => {
+                  arr.push({
+                    date:ele.proceedings.dateAndTime, title:ele.title, venue:ele.proceedings.venue, 
+                    chair_name:ele.proceedings.chair.name, startTime:ele.proceedings.startTime, duration:ele.proceedings.duration,
+                    noOfAttendees:ele.proceedings.attendanceDetails.noOfAttendees, attachments:ele.proceedings.attachments.sourceUrl,
+                    ip:ele.proceedings.individualProceedings, recBy:ele.proceedings.recorder
+                  })
+                });
+                console.log('arr',arr)
+                setPdata(arr)
                 setCrData(cData)
               }
             }
@@ -103,7 +115,7 @@ const FormComponent = ({tabKey,routeTitle,menuData,cDetailData,routeUri,setTabKe
                                             </div>
                                             {title == 'Forms/Downloads' && crData!==null?
                                            
-                                            <FormTabDetailComponent  cDetailData={crData}/>
+                                            <FormTabDetailComponent pdata={pData} cDetailData={crData}/>
                                             
                                             :<SpinningComponent/>  }
                                         </div>

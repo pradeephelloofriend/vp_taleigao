@@ -90,7 +90,7 @@ const CommitteeDetail = ({regCertData,cDetailData}) =>{
                         {/* <h4>{cDetailData.desc}</h4> */}
                         <div className='sp-cm' dangerouslySetInnerHTML={{ __html:cDetailData.desc!==null?cDetailData.desc:<></>}} />
                       {/* <div dangerouslySetInnerHTML={{ __html:cDetailData.title!==null?cDetailData.title:<></>}} /> */}
-                      <table>
+                      <table className='cust_tbl'>
                         <thead>
                           <tr>
                             <td className='fw-bolder fs-20 fs-clr' style={{textAlign:'center'}}>Name</td>
