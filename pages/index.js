@@ -20,6 +20,7 @@ import OtherLinksComponent from '../components/home/OtherLinksComponent';
 import Sliderbanner from '../components/home/Sliderbanner';
 import { selectIsloading } from '../redux/menu/menuSelector';
 import { Spin } from 'antd';
+import ComplainsComponent from '../components/complains/ComplainsComponent';
 
 //get initial ServerSideProps
 
@@ -37,6 +38,7 @@ const index = ({isLoading}) => {
             <FacilitesComponent/>
             <Schemes/>
             <MapComponent/>
+            <ComplainsComponent />
             </Spin>
         </>
     )

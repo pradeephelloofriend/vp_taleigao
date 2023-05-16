@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import {useRouter} from 'next/router'
-import pmap from '../../public/img/mormugaoMap2.png'
+import pmap from '../../public/img/profile/Taleigao-map-ph-5.jpg'
 
 const RegionComponent = () => {
     const router=useRouter()

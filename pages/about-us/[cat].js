@@ -8,7 +8,7 @@ const village = () => {
   const router=useRouter()
     
     const tempTitle=router.query.title;
-    // console.log('router',router)
+    console.log('router',router)
     // console.log('tempTitle about',tempTitle)
   return (
     <>

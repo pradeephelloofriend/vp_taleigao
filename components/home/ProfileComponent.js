@@ -1,7 +1,7 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
 import Image from 'next/image'
-import pmap from '../../public/img/profile/Taleigao-map.jpg'
+import pmap from '../../public/img/profile/Taleigao-map-ph-4.png'
 
 const ProfileComponent = () => {
   return (
@@ -11,7 +11,7 @@ const ProfileComponent = () => {
         <div className="row">
           <div className="col-lg-5">
             <div className='pf-img-block'>
-                <Image className='image' alt="example" src={pmap} height={800} width={800}/>
+                <Image className='image' alt="example" src={pmap} height={2000} width={1000}/>
                 {/* <img src='https://res.cloudinary.com/depg2aab2/image/upload/v1670342628/vp/dongrim/dongurli-map-min_jhxgx1.png' alt=''/> */}
             </div>
             
@@ -20,21 +20,21 @@ const ProfileComponent = () => {
           <Card >
             <Card.Body>
             <div className='pf-content-block '>
-            <h4 className="display-6 mb-0 text-white">Chicalim Profile</h4>
+            <h4 className="display-6 mb-0 text-white">Taleigao Profile</h4>
               <Card className='display-c1'>
                 <Card.Body>
                   <ul className='ph-ul text-white mt-3'>
                     <li>Block / Taluka 
-                      <p>Mormugao</p>
+                      <p>Tiswadi</p>
                     </li>
                     <li>District 
-                      <p>South Goa</p>
+                      <p>North goa</p>
                     </li>
                     <li>State 
                       <p>Goa</p>
                     </li>
                     <li>Pincode 
-                      <p>403711</p>
+                      <p>403002</p>
                     </li>
                   </ul>
                 </Card.Body>
@@ -43,14 +43,14 @@ const ProfileComponent = () => {
               <Card className='display-c1'>
                 <Card.Body>
                   <ul className='ph-ul text-white mt-3'>
-                    <li>Area 
+                    {/* <li>Area 
                       <p>6901.68 hectares</p>
-                    </li>
+                    </li> */}
                     <li>Population(2011) 
-                      <p>6,933</p>
+                      <p>25,811</p>
                     </li>
                     <li>Households 
-                      <p>1190</p>
+                      <p>13,500</p>
                     </li>
 
                   </ul>
@@ -79,13 +79,13 @@ const ProfileComponent = () => {
                 <Card.Body>
                   <ul className='pf-ul text-white mt-3'>
                     <li className='pf-bg-orange'>Assembly Constituency
-                      <p>Mormugao</p>
+                      <p>Taleigao</p>
                     </li>
                     <li className='pf-bg-blue'>Parliament Constituency
-                      <p>South Goa</p>
+                      <p>North Goa</p>
                     </li>
                     <li className='pf-bg-skyb'>Nearest Town 
-                      <p>Mormugao</p>
+                      <p>Panaji</p>
                     </li>
 
                   </ul>
