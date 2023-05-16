@@ -44,7 +44,7 @@ import {selectFootData} from '../../redux/footer/footSelector';
                                     Taleigao, Tiswadi – Goa</span>
                                 <span className='mr-5'><i className="fa fa-phone" aria-hidden="true"></i>  0832-2453608</span>
                                 <span className='mr-5'> <i className="fa fa-envelope-o" aria-hidden="true"></i> sec.taleigao@gmail.com</span></p>
-                         <p className="mb-2 mb-lg-0">© 2023 VPChicalim. All rights reserved.</p>
+                         <p className="mb-2 mb-lg-0">© 2023 VPTaleigao. All rights reserved.</p>
                      </div>
                  </div>
 

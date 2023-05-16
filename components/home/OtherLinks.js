@@ -74,7 +74,6 @@ const OtherLinks = () => {
                     <div className='col-md-6 news-links'>
                         <div className="kam-topbar-left  align-items-center">
                             <ul className='sm-btm-right d-flex justify-content-between'>
-                                            
                                 <li onClick={() =>goToPage('reporting/admin-and-audit','admin-and-audit','Admin and Audit','Reporting','/admin-and-audit/','Yes')}>
                                     <span>
                                     <AuditOutlined />
@@ -118,10 +117,10 @@ const OtherLinks = () => {
                                     {/* <p>hello</p> */}
                                 </li>
                                 <li>
-                                    <span onClick={()=> window.open("https://smarthubgovernment.hdfcbank.com","_blank")}>
+                                    <span onClick={()=> window.open("https://smarthubgovernment.hdfcbank.com/SmartHubGovt/Landing.action?instId=1238","_blank")}>
                                     <HomeOutlined />
                                     </span>
-                                    <a onClick={()=> window.open("https://smarthubgovernment.hdfcbank.com","_blank")}>House Tax</a>
+                                    <a onClick={()=> window.open("https://smarthubgovernment.hdfcbank.com/SmartHubGovt/Landing.action?instId=1238","_blank")}>House Tax</a>
                                 </li>
                             </ul>
                         </div>

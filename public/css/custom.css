@@ -5187,6 +5187,13 @@ padding-left: 0rem;
 .bg-light-orange{
   background-color: #FAB696;
 }
+.bg-orange{
+  margin: 0px 0px 0px 12px;
+  padding: 0px 6px 0px 5px;
+  color: black;
+  border: 1px solid orange;
+  border-radius: 10px;
+}
 .bg-light-skyb {
   background-color: #4fc3ff61;
 }
@@ -6189,4 +6196,7 @@ border: 0px;
 .record-box {
   display: flex;
     gap: 10px;
+}
+.cm-pb-2 {
+  padding: 2% 0% 2% 0%;
 }

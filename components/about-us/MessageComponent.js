@@ -30,7 +30,7 @@ const MessageComponent = () => {
 
           <div className='desk-image'>
           
-          <Image src={'https://res.cloudinary.com/depg2aab2/image/upload/v1667626182/vp/nagoa/user-min_dbcgcb.jpg'} alt='' height={200} width={200} />
+          <Image src={'https://res.cloudinary.com/depg2aab2/image/upload/v1684234824/vp/taleigao/sarpanch_taleigao_wbd4vi.jpg'} alt='' height={200} width={200} />
             
           </div>
           <div className="mb-3" dangerouslySetInnerHTML={{ __html:crData!==null?crData.desc:<></>}} />

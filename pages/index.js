@@ -38,7 +38,6 @@ const index = ({isLoading}) => {
             <FacilitesComponent/>
             <Schemes/>
             <MapComponent/>
-            <ComplainsComponent />
             </Spin>
         </>
     )

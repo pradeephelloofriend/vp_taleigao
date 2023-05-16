@@ -7,6 +7,8 @@ import { selectMenuData } from '../../redux/menu/menuSelector';
 import { setTabKey } from '../../redux/menu/menuAction';
 import { createStructuredSelector } from 'reselect'
 import { useRouter } from 'next/router'
+import Image from 'next/image'
+import icon1 from '../../public/img/home/report.png'
 
 const MenuItemComponent = ({ menuData ,setTabKey}) => {
     // console.log('menuData2', menuData)
@@ -56,6 +58,16 @@ const MenuItemComponent = ({ menuData ,setTabKey}) => {
 
                         
             </Nav>
+
+            <div className="d-flex flex-row align-items-center nav-menu-right bg-orange" onClick={() => goToPage('complains/', 'complains', 'complains', 'complains', '', 'Yes')}>
+                <div className="div1call">
+                    <div className="mx-auto me-2 mb-lg-2 mb-xl-0 mt-2"><a><Image src={icon1} alt="" /></a> </div>
+                </div>
+                <div className="div1call">
+                    <p className='mb-0' >Have any Complains?</p>
+                    {/* <p className='mb-0'><span className='main-color-font'></span><a href="tel:9326574349" >(+91) 9326574349</a></p> */}
+                </div>
+            </div>
         </>
     )
 }
