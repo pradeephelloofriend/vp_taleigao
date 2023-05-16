@@ -6178,3 +6178,15 @@ border: 0px;
   background-color: #0C9463;
   color: #fff;
 }
+
+
+
+.proc-1-box{
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.record-box {
+  display: flex;
+    gap: 10px;
+}

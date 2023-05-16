@@ -5,7 +5,7 @@ import {selectMenuData,selectTabKey} from '../../redux/menu/menuSelector'
 import {setTabKey} from '../../redux/menu/menuAction'
 import {Tabs,Card } from 'antd';
 import { useRouter } from 'next/router'
-import {getCertificateData, getProceedData} from '../../lib/api'
+import {getCertificateData} from '../../lib/api'
 
 import Axios from 'axios';
 import DetailComponent from '../detail/DetailComponent';
@@ -13,14 +13,11 @@ import DetailComponent from '../detail/DetailComponent';
 import FormTabDetailComponent from './FormTabDetailComponent';
 import TabDetailsComponent from '../about-us/TabDetailsComponent';
 import SpinningComponent from '../spin/SpinningComponent';
-import ProceedingComponent from '../proceedings/ProceedingComponent';
-import ProceedingTabDetailsComponent from '../proceedings/ProceedingTabDetailsComponent';
-
+import ProccedingComponent from './ProccedingComponent';
 const { TabPane } = Tabs;
 const FormComponent = ({tabKey,routeTitle,menuData,cDetailData,routeUri,setTabKey}) => {
     const [mData,setMdata]=React.useState(null);
     //const [tabKey,setTabKey]=React.useState(routeUri)
-    const[pData,setPdata]=React.useState(null)
     const [crData,setCrData]=React.useState(null)
     const router = useRouter();
     const[tabLayout,setTablLayout]=React.useState('left')
@@ -35,28 +32,17 @@ const FormComponent = ({tabKey,routeTitle,menuData,cDetailData,routeUri,setTabKe
         /*if(tabKey!==null){
             //console.log('tabKey',tabKey)
             async function fetchData() {
-              // const cData = await getCertificateData(tabKey) //applo client 
-              const cData = await getProceedData()
+              const cData = await getCertificateData(tabKey) //applo client 
+        
               // 👇️ only update state if component is mounted
               if (isApiSubscribed) {
-                let arr=[]
-                cData.forEach((ele,idx) => {
-                  arr.push({
-                    date:ele.proceedings.dateAndTime, title:ele.title, venue:ele.proceedings.venue, 
-                    chair_name:ele.proceedings.chair.name, startTime:ele.proceedings.startTime, duration:ele.proceedings.duration,
-                    noOfAttendees:ele.proceedings.attendanceDetails.noOfAttendees, attachments:ele.proceedings.attachments.sourceUrl,
-                    ip:ele.proceedings.individualProceedings, recBy:ele.proceedings.recorder
-                  })
-                });
-                console.log('arr',arr)
-                setPdata(arr)
                 setCrData(cData)
               }
             }
             fetchData()
             
             
-          }*/
+        }*/
         /**Responsive tab */
         function handleResize() {
             if (window.matchMedia("(min-width: 1400px)").matches) {
@@ -100,8 +86,6 @@ const FormComponent = ({tabKey,routeTitle,menuData,cDetailData,routeUri,setTabKe
     
    const {title,desc,iscomplete}= router.query
    //console.log('crData',crData)
-   //console.log('mData',mData)
-   //console.log('crData title ',crData)
   return (
     <>
           <section className="wrapper bg-gray">
@@ -115,17 +99,10 @@ const FormComponent = ({tabKey,routeTitle,menuData,cDetailData,routeUri,setTabKe
                                         <div className='page-content'>
                                             <div className="caption1">
                                                 <h1>{t.node.label}</h1>
-                                                <h1>{t.node.route.code}</h1>
                                             </div>
-                                            {/* {title == 'Forms/Downloads' && crData!==null?
-                                           
-                                            <FormTabDetailComponent pdata={pData} cDetailData={crData}/>
-                                            
-                                            :<SpinningComponent/>  } */}
-                                      {t.node.route.code == 'proceedings' ?
-                                        <ProceedingComponent/>
-                                        :<ProceedingTabDetailsComponent />
-                                      }
+                                            {t.node.route.code=='proceedings'?
+                                              <ProccedingComponent/>
+                                            : <TabDetailsComponent/> }
                                         </div>
                                         
                                  </TabPane>

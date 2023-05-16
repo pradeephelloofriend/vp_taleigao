@@ -17,18 +17,7 @@ const ProceedingComponent = ({}) => {
   const [crData,setCrData]=React.useState(null)
   const [expended, setExpended] = React.useState();
 
-  const expend = (index) => {
-    if (expended === index) setExpended(undefined);
-    else setExpended(index);
-};
-
-  const expandedRowRender = (record) => {
-    return (
-      <div>
-        <p>{record.description}</p>
-      </div>
-    );
-  };
+  
 
   React.useEffect(()=>{
     //console.log('tabKey',tabKey)
