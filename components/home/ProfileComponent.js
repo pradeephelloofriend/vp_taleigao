@@ -1,7 +1,7 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
 import Image from 'next/image'
-import pmap from '../../public/img/mormugaoMap2.png'
+import pmap from '../../public/img/profile/Taleigao-map.jpg'
 
 const ProfileComponent = () => {
   return (

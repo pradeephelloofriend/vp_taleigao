@@ -13,6 +13,9 @@ import DetailComponent from '../detail/DetailComponent';
 import FormTabDetailComponent from './FormTabDetailComponent';
 import TabDetailsComponent from '../about-us/TabDetailsComponent';
 import SpinningComponent from '../spin/SpinningComponent';
+import ProceedingComponent from '../proceedings/ProceedingComponent';
+import ProceedingTabDetailsComponent from '../proceedings/ProceedingTabDetailsComponent';
+
 const { TabPane } = Tabs;
 const FormComponent = ({tabKey,routeTitle,menuData,cDetailData,routeUri,setTabKey}) => {
     const [mData,setMdata]=React.useState(null);
@@ -29,7 +32,7 @@ const FormComponent = ({tabKey,routeTitle,menuData,cDetailData,routeUri,setTabKe
             //console.log('filterData',data)
             setMdata(data.node)
         }
-        if(tabKey!==null){
+        /*if(tabKey!==null){
             //console.log('tabKey',tabKey)
             async function fetchData() {
               // const cData = await getCertificateData(tabKey) //applo client 
@@ -37,7 +40,7 @@ const FormComponent = ({tabKey,routeTitle,menuData,cDetailData,routeUri,setTabKe
               // 👇️ only update state if component is mounted
               if (isApiSubscribed) {
                 let arr=[]
-                cData.forEach(ele => {
+                cData.forEach((ele,idx) => {
                   arr.push({
                     date:ele.proceedings.dateAndTime, title:ele.title, venue:ele.proceedings.venue, 
                     chair_name:ele.proceedings.chair.name, startTime:ele.proceedings.startTime, duration:ele.proceedings.duration,
@@ -53,7 +56,7 @@ const FormComponent = ({tabKey,routeTitle,menuData,cDetailData,routeUri,setTabKe
             fetchData()
             
             
-        }
+          }*/
         /**Responsive tab */
         function handleResize() {
             if (window.matchMedia("(min-width: 1400px)").matches) {
@@ -97,8 +100,8 @@ const FormComponent = ({tabKey,routeTitle,menuData,cDetailData,routeUri,setTabKe
     
    const {title,desc,iscomplete}= router.query
    //console.log('crData',crData)
-   console.log('mData',mData)
-   console.log('crData title ',crData)
+   //console.log('mData',mData)
+   //console.log('crData title ',crData)
   return (
     <>
           <section className="wrapper bg-gray">
@@ -112,12 +115,17 @@ const FormComponent = ({tabKey,routeTitle,menuData,cDetailData,routeUri,setTabKe
                                         <div className='page-content'>
                                             <div className="caption1">
                                                 <h1>{t.node.label}</h1>
+                                                <h1>{t.node.route.code}</h1>
                                             </div>
-                                            {title == 'Forms/Downloads' && crData!==null?
+                                            {/* {title == 'Forms/Downloads' && crData!==null?
                                            
                                             <FormTabDetailComponent pdata={pData} cDetailData={crData}/>
                                             
-                                            :<SpinningComponent/>  }
+                                            :<SpinningComponent/>  } */}
+                                      {t.node.route.code == 'proceedings' ?
+                                        <ProceedingComponent/>
+                                        :<ProceedingTabDetailsComponent />
+                                      }
                                         </div>
                                         
                                  </TabPane>

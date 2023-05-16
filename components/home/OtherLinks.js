@@ -118,10 +118,10 @@ const OtherLinks = () => {
                                     {/* <p>hello</p> */}
                                 </li>
                                 <li>
-                                    <span onClick={()=> window.open("https://chicalim-user.netlify.app/","_blank")}>
+                                    <span onClick={()=> window.open("https://smarthubgovernment.hdfcbank.com/SmartHubGovt/DirectLoadQuickPay.action?uniqueSessionIdentifier=036806922381296999560123456789","_blank")}>
                                     <HomeOutlined />
                                     </span>
-                                    <a onClick={()=> window.open("https://chicalim-user.netlify.app/","_blank")}>House Tax</a>
+                                    <a onClick={()=> window.open("https://smarthubgovernment.hdfcbank.com/SmartHubGovt/DirectLoadQuickPay.action?uniqueSessionIdentifier=036806922381296999560123456789","_blank")}>House Tax</a>
                                 </li>
                             </ul>
                         </div>

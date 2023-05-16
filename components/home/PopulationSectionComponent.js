@@ -16,8 +16,8 @@ const PopulationSectionComponent = () => {
                   <div className="row">
                       <div className="col-lg-6 col-xl-6 mx-auto">
                           {/*<h2 className="display-4 mb-3 text-center">Join Our Community</h2>*/}
-                          <p className="mb-0 px-md-16 px-lg-3 link-disp-black no-padding">"My idea of village SWARAJ is that is a complete republic, independent of its neighbors for its own vital wants, and yet interdependent for many others which dependence is a necessity."</p>
-                          <p className='mb-0'>--Mahatma Gandhi</p>
+                          <p className="mb-0 px-md-16 px-lg-3 link-disp-black no-padding">"Clean Administration and Ready to help People of Taleigao anytime for our beautiful Green Taleigao Village"</p>
+                          <p className='mb-0'>--Sarpanch</p>
                       </div>
                       
                   </div>
