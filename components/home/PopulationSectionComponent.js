@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import pic from '../../public/img/population/population.jpg'
-import pslidea from '../../public/img/population-slide1.jpg'
+import pslidea from '../../public/img/population-slide1.png'
 
 const PopulationSectionComponent = () => {
   return (
@@ -30,7 +30,7 @@ const PopulationSectionComponent = () => {
                             </div>
                             
                             <div className="col-md-6 text-center mb-5">
-                                <h3 className="counter counter-lg link-disp-black">6,933</h3>
+                                <h3 className="counter counter-lg link-disp-black">25,811</h3>
                                 <p>Total Population</p>
                             </div>
                             

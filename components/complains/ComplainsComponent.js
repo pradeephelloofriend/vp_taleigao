@@ -68,7 +68,8 @@ const ComplainsComponent = () => {
         console.log('Failed:', errorInfo);
       }
   return (
-      <div className='comp-form pd-20'>
+    <div className="container py-10 py-md-10 pb-md-10">
+      <div >
         <Spin spinning={isLoading}>
           <Form
               name="basic"
@@ -178,6 +179,7 @@ const ComplainsComponent = () => {
           </Form>
           </Spin>
       </div>
+    </div>
   )
 }
 

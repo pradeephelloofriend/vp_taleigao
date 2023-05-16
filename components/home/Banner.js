@@ -11,7 +11,7 @@ import SwiperCore, {
 } from 'swiper';
 import { getSliderHomeData } from '../../lib/api';
 import { getVillageData } from '../../lib/api'
-import abt1 from '../../public/img/abtus1a.png'
+import abt1 from '../../public/img/abt_taleigao.jpg'
 
 const {Title,Text}=Typography
 SwiperCore.use([Pagination]);
