@@ -31,7 +31,7 @@ import {selectFootData} from '../../redux/footer/footSelector';
                             <a href="#">Disclaimer</a>
                             <a href="#">Terms and Conditions</a>
                             <a href="#">Feedback</a>
-                            <a href="#">Complain</a>
+                            <a onClick={() => goToPage('complains/', 'complains', 'complains', 'complains', '', 'Yes')}>Complain</a>
                         </nav>
                     </div>
                      <hr className="mt-0 mb-2" />

@@ -52,9 +52,9 @@ const Banner = ({sliderData}) => {
           <div className="container py-10 py-md-10 pb-md-10">
             <div className='row'>
               <div className='col-lg-6 col-md-6 col-sm-6'>
-                <Card>
+                <Card className='bg-light-blue '>
                   
-                  <div className='slider-block  '>
+                  <div className='slider-block'>
                     <div className="caption1">
                       <h1>About </h1>
                       <h2>{ vilData!==null?vilData.title:<></>}</h2>

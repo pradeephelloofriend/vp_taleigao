@@ -9,28 +9,30 @@ const OtherLinksComponent = () => {
             <div className='row'>
                 <div className='col-3'>
                     <Card className='ol-card ol-hos'
-                    title={<b>Hospitals in Chicalim</b>}
+                    title={<b>Hospitals in Taleigao</b>}
                     >
                         <div className='ol-box'>
                             <ul className='text-wh'>
-                                <li>V.M Salgaokar Hospital</li>
-                                <li>Pai Hospital</li>
-                                <li>Cottage Hospital</li>
+                                <li>Goa Medical College & Hospital - GMC </li>
+                                <li>Chest Disease & TB Hospital</li>
+                                <li>Urban Health Center TALEIGAO</li>
+                                <li>Primary Health Centre, Panaji</li>
                             </ul>
                         </div>
                     </Card>
                 </div>
                 <div className='col-3'>
                     <Card className='ol-card ol-tur'
-                    title={<b>Tourist Places Near By Chicalim</b>}
+                    title={<b>Tourist Places Near By Taleigao</b>}
                     >
                         <div className='ol-box'>
                             <ul className='text-wh'>
-                                <li>Bogmalo Beach  </li>
-                                <li>Three Kings Church    </li>
-                                <li>Hollant Beach  </li>
-                                <li>Sao Jacinto Island   </li>
-                                <li>Naval Aviation Museum</li>
+                                <li>Statue of Jack de Sequeira </li>
+                                <li>Cabo Raj Nivas </li>
+                                <li>Casa do Povo de Taleigão </li>
+                                <li>Dona Paula View Point  </li>
+                                <li>Caranzalem Beach</li>
+                                <li>Cacra View Point</li>
                                 <br/>
                             </ul>
                         </div>
@@ -38,26 +40,30 @@ const OtherLinksComponent = () => {
                 </div>
                 <div className='col-3'>
                     <Card className='ol-card ol-park'
-                    title={<b>Local Parks in Chicalim</b>}
+                    title={<b>Educational Institutions in Taleigao</b>}
                     >
                         <div className='ol-box'>
                             <ul className='text-wh'>
-                                <li>Joggers Park</li>
-                                <li>Chicalim Sports Club</li>
-                                <li>Green Space Chicalim</li>
-                                <li>Childrens Park</li>
+                                <li>Don Bosco School, Oxdel</li>
+                                <li>Goa University</li>
+                                <li>St. Michael School, Taleigao-Goa </li>
+                                <li>National Institute of Oceanography</li>
                             </ul>
                         </div>
                     </Card>
                 </div>
                 <div className='col-3'>
                     <Card className='ol-card ol-park'
-                    title={<b>Government Offices near Chicalim</b>}
+                    title={<b>Government Offices near Taleigao</b>}
                     >
                         <div className='ol-box'>
                             <ul className='text-wh'>
-                                <li>Electricity Sub-section Office</li>
-                                <li>Chicalim Panchayat Ground</li>
+                                <li>Central Government Tourist Office</li>
+                                <li>STC office</li>
+                                <li>Taleigao Panchayat</li>
+                                <li>Town & Country Planning Department Main Office</li>
+                                <li>Directorate Of Social Welfare</li>
+                                <li>Cabo Raj Bhavan</li>
                             </ul>
                         </div>
                     </Card>
