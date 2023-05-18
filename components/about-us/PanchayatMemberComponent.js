@@ -37,7 +37,12 @@ const PanchayatMemberComponent = () => {
                     <div className='team-content-block'>
                         <div className="team-block">
                             <div className="team-image">
-                                <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1667626182/vp/nagoa/user-min_dbcgcb.jpg'} alt=""  />
+                            {pmData !== null ?
+                                <Image className='lazy' layout='fill' 
+                                // src={'https://res.cloudinary.com/depg2aab2/image/upload/v1667626182/vp/nagoa/user-min_dbcgcb.jpg'} 
+                                src={pmData.directorateOfPanchayats.image.sourceUrl} 
+                                alt=""  />
+                                :<></>}    
                             </div>
                             <div className="team-content">
                                 <p className="darkGrey">{ pmData ? pmData.directorateOfPanchayats.name :<></>}</p>
@@ -53,7 +58,12 @@ const PanchayatMemberComponent = () => {
                     <div className='team-content-block'>
                         <div className="team-block">
                             <div className="team-image">
-                                <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1667626182/vp/nagoa/user-min_dbcgcb.jpg'} alt=""  />
+                            {pmData !== null ?
+                                  <Image className='lazy' layout='fill' 
+                                  // src={'https://res.cloudinary.com/depg2aab2/image/upload/v1667626182/vp/nagoa/user-min_dbcgcb.jpg'} 
+                                  src={pmData.directorateOfPanchayats.blockDevelopmentOfficer.image.sourceUrl} 
+                                  alt=""  />
+                                 :<></>}
                             </div>
                             <div className="team-content">
                                 {/* <p className="darkGrey">Suryajirao V. Rane</p> */}
@@ -75,7 +85,12 @@ const PanchayatMemberComponent = () => {
                         <div className='team-content-block'>
                         <div className="team-block">
                             <div className="team-image">
-                                <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1667626182/vp/nagoa/user-min_dbcgcb.jpg'} alt=""  />
+                            {pmData !== null ?
+                                    <Image className='lazy' layout='fill' 
+                                    // src={'https://res.cloudinary.com/depg2aab2/image/upload/v1667626182/vp/nagoa/user-min_dbcgcb.jpg'} 
+                                    src={d.image.sourceUrl} 
+                                    alt=""  />
+                                    :<></>}
                             </div>
                             <div className="team-content">
                                 <p className="darkGrey">{ d.name ? d.name :<></>}</p>
@@ -95,7 +110,12 @@ const PanchayatMemberComponent = () => {
                             <div className='team-content-block'>
                                 <div className="team-block">
                                     <div className="team-image">
-                                        <Image className='lazy' layout='fill' src={'https://res.cloudinary.com/depg2aab2/image/upload/v1667626182/vp/nagoa/user-min_dbcgcb.jpg'} alt=""  />
+                                    {pmData !== null ?
+                                        <Image className='lazy' layout='fill' 
+                                        // src={'https://res.cloudinary.com/depg2aab2/image/upload/v1667626182/vp/nagoa/user-min_dbcgcb.jpg'} 
+                                        src={j.image.sourceUrl} 
+                                        alt=""  />
+                                        :<></>}    
                                     </div>
                                     <div className="team-content">
                                         <p className="darkGrey">{ j.name ? j.name :<></>}</p>

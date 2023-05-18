@@ -9,14 +9,15 @@ const OtherLinksComponent = () => {
             <div className='row'>
                 <div className='col-3'>
                     <Card className='ol-card ol-hos'
-                    title={<b>Hospitals in Taleigao</b>}
+                    title={<b>Hospitals Near Taleigao</b>}
                     >
                         <div className='ol-box'>
                             <ul className='text-wh'>
                                 <li>Goa Medical College & Hospital - GMC </li>
                                 <li>Chest Disease & TB Hospital</li>
                                 <li>Urban Health Center TALEIGAO</li>
-                                <li>Primary Health Centre, Panaji</li>
+                                <li>Primary Health Centre, Panaji</li> 
+                                <li>Manipal Hospital</li>
                             </ul>
                         </div>
                     </Card>
@@ -48,6 +49,8 @@ const OtherLinksComponent = () => {
                                 <li>Goa University</li>
                                 <li>St. Michael School, Taleigao-Goa </li>
                                 <li>National Institute of Oceanography</li>
+                                <li>Auxillum High School</li>
+                                <li>Rosari High School</li>
                             </ul>
                         </div>
                     </Card>

@@ -88,13 +88,6 @@ const OtherLinks = () => {
                                     <a>Grants Received</a>
                                     {/* <p>hello</p> */}
                                 </li>
-                                <li onClick={() =>goToPage('reporting/tenders','tenders','Tenders','Reporting','/tenders/','Yes')}>
-                                    <span>
-                                        <BookOutlined />
-                                    </span>
-                                    <a>Tenders</a>
-                                    {/* <p>hello</p> */}
-                                </li>
                                 <li onClick={() =>goToPage('reporting/applications','applications','Applications','Reporting','/applications/','Yes')}>
                                 <span>
                                     <FormOutlined />

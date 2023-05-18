@@ -61,7 +61,7 @@ const MenuItemComponent = ({ menuData ,setTabKey}) => {
 
             <div className="d-flex flex-row align-items-center nav-menu-right bg-orange" onClick={() => goToPage('complains/', 'complains', 'complains', 'complains', '', 'Yes')}>
                 <div className="div1call">
-                    <div className="mx-auto me-2 mb-lg-2 mb-xl-0 mt-2"><a><Image src={icon1} alt="" /></a> </div>
+                    <div className="mx-auto me-2 mb-lg-2 mb-xl-0 mt-2"><a><Image src={icon1} height={30} width={30} alt="" /></a> </div>
                 </div>
                 <div className="div1call">
                     <p className='mb-0' >Have any Complains?</p>

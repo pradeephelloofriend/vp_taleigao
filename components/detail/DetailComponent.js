@@ -110,7 +110,7 @@ const DetailComponent = ({regCertData,cDetailData}) =>{
                                         
                                     </div>
                                     <div className='btn-block mt-3'>
-                                    <Button onClick={() => handleShow()}  className='view-btn'>Upload Offline</Button>
+                                    <Button onClick={() => handleShow()} style={{display:'none'}}  className='view-btn'>Upload Offline</Button>
                                     </div>
 
                                 </Card>
