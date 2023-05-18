@@ -3,7 +3,7 @@ import {Card} from 'antd'
 import Image from 'next/image'
 import { gettaxes } from '../../lib/api'
 import SpinningComponent from '../spin/SpinningComponent'
-const MessageComponent = () => {
+const PanchStaffComponent = () => {
     const [crData,setCrData]=React.useState(null)
     React.useEffect(()=>{
         let isApiSubscribed = true;
@@ -89,4 +89,4 @@ const MessageComponent = () => {
   )
 }
 
-export default MessageComponent
+export default PanchStaffComponent

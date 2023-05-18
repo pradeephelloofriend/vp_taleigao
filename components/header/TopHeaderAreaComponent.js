@@ -41,7 +41,7 @@ const TopHeaderAreaComponent = ({setRegStatus,cUser}) => {
                                         Log Out
                                     </a>
                                     :
-                                    <a href="#" onClick={()=> window.open("https://chicalim-user.netlify.app/","_blank")} className="text-dblue">
+                                    <a href="#" onClick={()=> window.open("https://vp-taleigao-user.netlify.app","_blank")} className="text-dblue">
                                     <i className="fa fa-user-o me-xl-1"></i>
                                         Login/Register
                                     </a>
