@@ -33,8 +33,8 @@ const PanchayatMemberComponent = () => {
           <div className='pm-block h-scroll'>
             <Spin spinning={isLoading}>
             <Tree label={<div>
-                <Button className='team-level'>{ pmData ? pmData.directorateOfPanchayats.fieldGroupName :<></>}</Button>
-                    <div className='team-content-block'>
+                <Button style={{display:'none'}} className='team-level'>{ pmData ? pmData.directorateOfPanchayats.fieldGroupName :<></>}</Button>
+                    <div className='team-content-block' style={{display:'none'}}>
                         <div className="team-block">
                             <div className="team-image">
                             {pmData !== null ?
@@ -54,7 +54,7 @@ const PanchayatMemberComponent = () => {
                 
             }>
                 <TreeNode label={<div>
-                    <Button className='team-level'>{ pmData ? pmData.directorateOfPanchayats.blockDevelopmentOfficer.fieldGroupName :<></>}</Button>
+                    <Button style={{display:'none'}} className='team-level'>{ pmData ? pmData.directorateOfPanchayats.blockDevelopmentOfficer.fieldGroupName :<></>}</Button>
                     <div className='team-content-block'>
                         <div className="team-block">
                             <div className="team-image">
