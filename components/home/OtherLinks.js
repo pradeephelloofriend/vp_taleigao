@@ -4,8 +4,9 @@ import { NotificationOutlined, HomeOutlined, ProjectOutlined, TeamOutlined, Form
 import { getNoticeHomeData } from '../../lib/api';
 import { useRouter } from 'next/router'
 import { setTabKey } from '../../redux/menu/menuAction';
+import { connect } from 'react-redux';
 
-const OtherLinks = () => {
+const OtherLinks = ({setTabKey}) => {
     //console.log('noticedata1',noticeData)
     const [nData,setNdata]=React.useState(null)
    
@@ -74,25 +75,18 @@ const OtherLinks = () => {
                     <div className='col-md-6 news-links'>
                         <div className="kam-topbar-left  align-items-center">
                             <ul className='sm-btm-right d-flex justify-content-between'>
-                                <li onClick={() =>goToPage('reporting/admin-and-audit','admin-and-audit','Admin and Audit','Reporting','/admin-and-audit/','Yes')}>
+                                <li onClick={() =>goToPage('forms/proceedings','proceedings','Proceedings','Forms/Downloads','/proceedings/','Yes')}>
                                     <span>
                                     <AuditOutlined />
                                     </span>
-                                    <a>Admin & Audit</a>
+                                    <a>Proceedings</a>
                                     {/* <p>hello</p> */}
                                 </li>
-                                <li onClick={() =>goToPage('reporting/grants-received','grants-received','Grants Received','Reporting','/grants-received/','Yes')}>
-                                    <span>
-                                        <LikeOutlined />
-                                    </span>
-                                    <a>Grants Received</a>
-                                    {/* <p>hello</p> */}
-                                </li>
-                                <li onClick={() =>goToPage('reporting/applications','applications','Applications','Reporting','/applications/','Yes')}>
+                                <li onClick={()=> window.open("https://goaonline.gov.in/AllServices?cat=all","_blank")}>
                                 <span>
                                     <FormOutlined />
                                     </span>
-                                    <a>Applications</a>
+                                    <a onClick={()=> window.open("https://goaonline.gov.in/AllServices?cat=all","_blank")}>Goa Online</a>
                                     {/* <p>hello</p> */}
                                 </li>
                                 <li onClick={() =>goToPage('about-us/panchayat-members','panchayat-members','Panchayat Members','About Us','/panchayat-members/','Yes')}>
@@ -128,4 +122,7 @@ const OtherLinks = () => {
     )
 }
     
-export default OtherLinks
+const mapDispatchToProps=dispatch=>({
+    setTabKey:(data)=>dispatch(setTabKey(data))
+})
+export default connect(null,mapDispatchToProps) (OtherLinks)
