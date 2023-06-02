@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "next dev -p 3001",
-    "build": "next build",
-    "start": "next start",
+    "build": "next build --openssl-legacy-provider build",
+    "start": "next start --openssl-legacy-provider start",
     "lint": "next lint"
   },
   "repository": {
