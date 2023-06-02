@@ -110,10 +110,10 @@ const OtherLinks = () => {
                                     {/* <p>hello</p> */}
                                 </li>
                                 <li>
-                                    <span onClick={()=> window.open("https://smarthubgovernment.hdfcbank.com/SmartHubGovt/Landing.action?instId=1238","_blank")}>
+                                    <span onClick={()=> window.open("https://panchayatsgoa.gov.in/login.aspx","_blank")}>
                                     <HomeOutlined />
                                     </span>
-                                    <a onClick={()=> window.open("https://smarthubgovernment.hdfcbank.com/SmartHubGovt/Landing.action?instId=1238","_blank")}>House Tax</a>
+                                    <a onClick={()=> window.open("https://panchayatsgoa.gov.in/login.aspx","_blank")}>House Tax</a>
                                 </li>
                             </ul>
                         </div>
