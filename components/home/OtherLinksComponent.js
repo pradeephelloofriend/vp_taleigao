@@ -7,7 +7,7 @@ const OtherLinksComponent = () => {
         <div className="container py-10 py-md-10 pb-md-10">
 
             <div className='row'>
-                <div className='col-3'>
+                <div className='col-md-3'>
                     <Card className='ol-card ol-hos'
                     title={<b>Hospitals Near Taleigao</b>}
                     >
@@ -22,7 +22,7 @@ const OtherLinksComponent = () => {
                         </div>
                     </Card>
                 </div>
-                <div className='col-3'>
+                <div className='col-md-3'>
                     <Card className='ol-card ol-tur'
                     title={<b>Tourist Places Near By Taleigao</b>}
                     >
@@ -39,7 +39,7 @@ const OtherLinksComponent = () => {
                         </div>
                     </Card>
                 </div>
-                <div className='col-3'>
+                <div className='col-md-3'>
                     <Card className='ol-card ol-park'
                     title={<b>Educational Institutions in Taleigao</b>}
                     >
@@ -55,7 +55,7 @@ const OtherLinksComponent = () => {
                         </div>
                     </Card>
                 </div>
-                <div className='col-3'>
+                <div className='col-md-3'>
                     <Card className='ol-card ol-park'
                     title={<b>Government Offices near Taleigao</b>}
                     >
