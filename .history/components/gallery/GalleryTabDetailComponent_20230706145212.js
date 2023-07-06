@@ -51,7 +51,7 @@ const GalleryTabDetailComponent = ({cDetailData}) => {
                                       <div key={ix} className='img-box'>
                                               {d.image.map((i,is)=> 
                                               <div className='iv-content' key={is} >
-                                                  {d.categoryName.name=='photo'? 
+                                                  {d.categoryName.name=='photos'? 
                                                   <img src={i.mediaItemUrl} alt=''/>
                                                           :
                                                           
@@ -62,7 +62,7 @@ const GalleryTabDetailComponent = ({cDetailData}) => {
                                                   }
                                                   <div className='img-tag-box'>
                                  
-                                                      <span className="badge centre bg-primary text-light link-c-blue rounded-pill">{i.title}</span>
+                                                      <span className="badge centre bg-blue text-white link-c-blue rounded-pill">{i.title}</span>
                                                   </div>
                                               </div>
                                               

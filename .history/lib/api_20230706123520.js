@@ -357,7 +357,38 @@ export async function getSarpanchMsg(tabKey) {
   `)
   return data?.pageBy?.sarpanchMsg
 }
-
+export async function getMediaGalleryData() {
+  //console.log('tabKey-applo',tabKey)
+  const data = await fetchAPI(`
+  query getMediaGalleryData {
+    mediaGalleries {
+      edges {
+        node {
+          title
+          slug
+          gallery {
+            content {
+              categoryName {
+                name
+                slug
+                taxonomyName
+                termTaxonomyId
+                uri
+              }
+              image {
+                slug
+                sourceUrl
+                mediaItemUrl
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  `)
+  return data?.mediaGalleries?.edges
+}
 export async function getNoticeHomeData() {
   //console.log('tabKey-applo',tabKey)
   const data = await fetchAPI(`
@@ -759,84 +790,4 @@ export async function getPanchStaff(tabKey) {
   }
   `)
   return data?.pageBy?.panchStaffMembers
-}
-export async function getGalleryCat() {
-  //console.log('tabKey-applo',tabKey)
-  const data = await fetchAPI(`
-  query getGalleryCat {
-    mediaSubcategories {
-      nodes {
-        termTaxonomyId
-        name
-      }
-    }
-  }
-  `)
-  return data?.mediaSubcategories?.nodes
-}
-
-export async function getGalleryByCat(catId) {
-  //console.log('tabKey-applo',tabKey)
-  const data = await fetchAPI(`
-  query getGalleryByCat {
-    mediaSubcategories(where: {termTaxonomyId: "${catId}"}) {
-          nodes {
-            termTaxonomyId
-            name
-            mediaGalleries {
-              nodes {
-                title
-                gallery {
-                  content {
-                    categoryName {
-                      name
-                      termTaxonomyId
-                    }
-                    image {
-                      title
-                      sourceUrl
-                      mediaItemUrl
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-  `)
-  return data?.mediaSubcategories?.nodes
-}
-
-export async function getMediaGalleryData() {
-  //console.log('tabKey-applo',tabKey)
-  const data = await fetchAPI(`
-  query getMediaGalleryData {
-    mediaGalleries {
-      edges {
-        node {
-          title
-          slug
-          gallery {
-            content {
-              categoryName {
-                name
-                slug
-                taxonomyName
-                termTaxonomyId
-                uri
-              }
-              image {
-                slug
-                sourceUrl
-                mediaItemUrl
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  `)
-  return data?.mediaGalleries?.edges
 }

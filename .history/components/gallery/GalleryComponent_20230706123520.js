@@ -5,7 +5,7 @@ import {selectMenuData,selectTabKey} from '../../redux/menu/menuSelector'
 import {setTabKey} from '../../redux/menu/menuAction'
 import {Tabs,Card,Spin } from 'antd';
 import { useRouter } from 'next/router'
-import {getGalleryCat, getMediaGalleryData} from '../../lib/api'
+import {getMediaGalleryData} from '../../lib/api'
 
 import Axios from 'axios';
 
@@ -33,14 +33,12 @@ const GalleryComponent = ({tabKey,routeTitle,menuData,cDetailData,routeUri,setTa
             if(isApiSubscribed){
               if(tabKey=='/photos-and-video/'){
                 async function fetchData() {
-                  const cData = await getGalleryCat() //applo client  
+                  const cData = await getMediaGalleryData() //applo client  
             
                   // 👇️ only update state if component is mounted
                   if (isApiSubscribed) {
                     setCrData(cData)
                     setIsLoading(false)
-
-                    console.log("cdata", cData)
                   }
                 }
                 fetchData()
@@ -93,7 +91,7 @@ const GalleryComponent = ({tabKey,routeTitle,menuData,cDetailData,routeUri,setTa
     },[menuData,routeTitle,tabKey])
     
     
-   const {iscomplete}= router.query
+   const {title,desc,iscomplete}= router.query
    //console.log('crData',crData)
   return (
     <>
@@ -112,6 +110,8 @@ const GalleryComponent = ({tabKey,routeTitle,menuData,cDetailData,routeUri,setTa
                                             </div>
                                             {crData!==null&&iscomplete=='Yes'?
                                            <GalleryTabDetailComponent cDetailData={crData}/>
+                                            
+                                            
                                             : <></>   }
                                         </div>
                                         </Spin>

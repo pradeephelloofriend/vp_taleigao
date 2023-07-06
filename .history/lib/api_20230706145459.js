@@ -357,7 +357,38 @@ export async function getSarpanchMsg(tabKey) {
   `)
   return data?.pageBy?.sarpanchMsg
 }
-
+export async function getMediaGalleryData() {
+  //console.log('tabKey-applo',tabKey)
+  const data = await fetchAPI(`
+  query getMediaGalleryData {
+    mediaGalleries {
+      edges {
+        node {
+          title
+          slug
+          gallery {
+            content {
+              categoryName {
+                name
+                slug
+                taxonomyName
+                termTaxonomyId
+                uri
+              }
+              image {
+                slug
+                sourceUrl
+                mediaItemUrl
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  `)
+  return data?.mediaGalleries?.edges
+}
 export async function getNoticeHomeData() {
   //console.log('tabKey-applo',tabKey)
   const data = await fetchAPI(`
