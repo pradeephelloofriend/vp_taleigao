@@ -86,7 +86,7 @@ const CommitteeDetail = ({regCertData,cDetailData}) =>{
               <Tabs tabPosition={tabLayout} className='sub-tab'>
 
                   <TabPane tab="Application" key="app"> */}
-                      <div className='page-content'>
+                      <div className='page-content scrollable-div'>
                         {/* <h4>{cDetailData.desc}</h4> */}
                         <div className='sp-cm' dangerouslySetInnerHTML={{ __html:cDetailData.desc!==null?cDetailData.desc:<></>}} />
                       {/* <div dangerouslySetInnerHTML={{ __html:cDetailData.title!==null?cDetailData.title:<></>}} /> */}

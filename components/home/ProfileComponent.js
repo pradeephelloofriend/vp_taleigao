@@ -9,14 +9,14 @@ const ProfileComponent = () => {
     <section className="wrapper image-wrapper bg-image bg-overlay profile-section" >
       <div className="container py-12">
         <div className="row">
-          <div className="col-lg-5">
+          <div className="col-md-5">
             <div className='pf-img-block'>
                 <Image className='image' alt="example" src={pmap} height={2000} width={1000}/>
                 {/* <img src='https://res.cloudinary.com/depg2aab2/image/upload/v1670342628/vp/dongrim/dongurli-map-min_jhxgx1.png' alt=''/> */}
             </div>
             
           </div>
-          <div className='col-7'>
+          <div className='col-md-7'>
           <Card >
             <Card.Body>
             <div className='pf-content-block '>

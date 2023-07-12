@@ -125,7 +125,7 @@ const ProccedingComponent = () => {
                   <h5>Gram Sabha for Period {pData[0].proceedings.proceedingsPeriods.name }</h5>
                   <div className='proc-table scheme-block'>
                     <p>List of Meeting held as on</p>
-                    <Table bordered 
+                    <Table className='scrollable-div' bordered 
                     dataSource={list} 
                     columns={columns} 
                     expandable={{

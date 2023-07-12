@@ -13,19 +13,55 @@ height: 1.2em;
         max-width: 1009px !important;
     }
 }
+@media only screen and (min-width: 992px) and (max-width: 1700px) {
+    .cust_tbl {
+        width: 100%;
+    }
+}
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .swiper_content {
         position: absolute;
         top: 47px;
         left: 100px
     }
+    .profile-section .pf-ul{
+        display: block;
+    }
+    .profile-section .ph-ul{
+        display: block;
+    }
+    .profile-section .pf-ul li {
+        margin-bottom: 15px;
+    }
+    .profile-section .ph-ul li {
+        margin-bottom: 30px;
+    }
+    
     
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 775px) and (max-width: 991px) {
     .swiper_content {
        left: 85px;
        top: 61px;
+    }   
+    .profile-section card {
+        width: 160% !important;
+    }
+}
+@media only screen and (min-width: 768px) {
+    
+    .profile-section .pf-ul{
+        display: block;
+    }
+    .profile-section .ph-ul{
+        display: block;
+    }
+    .profile-section .pf-ul li {
+        margin-bottom: 15px;
+    }
+    .profile-section .ph-ul li {
+        margin-bottom: 30px;
     }
 }
 @media only screen and (max-width: 767px) {
@@ -152,6 +188,7 @@ height: 1.2em;
     }
     .facility-tab .faci-card{
         margin-bottom: 10px;
+        width: 316px !important;
     }
     .ant-tabs-tab{
         padding: 6px 27px 6px 6px !important;
@@ -188,7 +225,35 @@ height: 1.2em;
         right: 0px;
         position: absolute;
     }
-
+    .profile-section .pf-ul{
+        display: block;
+    }
+    .profile-section .ph-ul{
+        display: block;
+    }
+    .profile-section .pf-ul li {
+        margin-bottom: 15px;
+    }
+    .profile-section .ph-ul li {
+        margin-bottom: 30px;
+    }
+    .ol-section .ol-card {
+        margin-bottom: 20px;
+    }
+    .mx-auto {
+        font-size: 74% !important;
+    }
+    .scheme-content {
+        margin-top: 10% !important;
+    }
+    .h-25 {
+        height: 11.5rem !important;
+    }
+    .scrollable-div {
+        overflow: auto;
+        max-height: 300px; /* Set a maximum height to limit the scrolling area */
+        max-width: 800px;
+      }
 }
 @media only screen and (max-width: 575px) {
     .swiper_content {
@@ -197,6 +262,18 @@ height: 1.2em;
     }
     .slide-btn .anticon {
         font-size: 40px;
+    }
+  }
+  @media only screen and (max-width: 320px) {
+    .swiper_content {
+        left: 25px;
+        top: 16px;
+    }
+    .slide-btn .anticon {
+        font-size: 40px;
+    }
+    .profile-section card {
+        width: 182%;
     }
   }
 /**end-responsive*/
