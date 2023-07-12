@@ -23,7 +23,11 @@ export default async function addCartItem(req, res) {
                     "contact_number": dataTemp.contact,
                     "subject": dataTemp.subject,
                     "message": dataTemp.msg,
-                    "category":dataTemp.cat
+                    "category":dataTemp.cat,
+                    "image":{
+                        "ID": dataTemp.imgId,
+                       "id":dataTemp.imgId 
+                    }
 
                 }
             })

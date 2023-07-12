@@ -1,13 +1,15 @@
 import React from 'react'
-import { Form, Input, Button, Checkbox,message,Select, Spin } from 'antd';
+import { Form, Input, Button, Checkbox,message,Select, Spin,Upload } from 'antd';
 import Axios from 'axios';
 import { getComplainCategoryData } from '../../lib/api';
 const { TextArea } = Input;
 const ComplainsComponent = () => {
     const[cData,setCdata]=React.useState(null)
+    const [fileList, setFileList] = React.useState([]);
     const [form] = Form.useForm();
     const { getFieldDecorator } =form;
     const[isLoading,setIsLoading]=React.useState(false)
+    const handleChange = ({ fileList: newFileList }) => setFileList(newFileList);
     React.useEffect(()=>{
         let isAppSubscribed=true
         
@@ -34,20 +36,35 @@ const ComplainsComponent = () => {
 
     },[])
     const onFinish = (values) => {
-        const dataTemp={
-            cat:values.complainTypes,
-            email:values.email,
-            contact:values.contact,
-            subject:values.subject,
-            msg:values.message
-        }
-        console.log('values-data',dataTemp)
+        
+        const imgList=values.idproof.file.originFileObj;
+        //console.log('img list',values)
+        const formData = new FormData();
+        formData.append("file",imgList,imgList.name)
+        formData.append("title", imgList.name);
+        //console.log('values-data',dataTemp)
         try {
+
             setIsLoading(true)
-            Axios.post(`/api/complain/addNewComplain/`,{dataTemp})
+            Axios.post(`/api/complain/imageUpload`,formData,{ 
+                headers:{
+                "content-type":"multipart/form-data"
+            },
+            })
+            .then(({data})=>{
+                    const dataTemp={
+                    cat:values.complainTypes,
+                    email:values.email,
+                    contact:values.contact,
+                    subject:values.subject,
+                    msg:values.message,
+                    imgId:data.id,
+                }
+                Axios.post(`/api/complain/addNewComplain/`,{dataTemp})
             .then(({ data }) => {
                 form.resetFields()
                 setIsLoading(false)
+                setFileList([])
                 message.success({
                     content: 'Your message Has been send successfully',
                     className: 'custom-class',
@@ -55,9 +72,11 @@ const ComplainsComponent = () => {
                       marginTop: '40vh',
                     },
                   });
-                console.log('api-taxi-data',data)
+                //console.log('api-taxi-data',data)
                 
             })
+        })
+            
             
         } catch (error) {
             setIsLoading(false)
@@ -162,7 +181,33 @@ const ComplainsComponent = () => {
               >
                   <TextArea showCount maxLength={350} autoSize={{ minRows: 3, maxRows: 6 }} />
               </Form.Item>
-
+              <Form.Item
+                    label="Photo"
+                    name="idproof"
+                    rules={[
+                        {
+                            required: true,
+                            
+                            message: 'Please input your ID Proof.!',
+                        },
+                    ]}
+                >
+                    
+                    <Upload 
+                    name="logo"  
+                    listType="picture"
+                    fileList={fileList}
+                    onChange={handleChange}
+                    >
+                         {fileList.length >= 1 ? null : 
+                            <Button>
+                            Click to upload
+                                </Button>
+                         }
+                        
+                    </Upload>
+                   
+                </Form.Item>
 
               <Form.Item
                   wrapperCol={{
